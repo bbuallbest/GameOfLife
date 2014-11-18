@@ -42,7 +42,7 @@ $(function() {
 function firstPopulation() {
     var request = $.ajax({
         type: "GET",
-        url: "/api/rest/population/" + firstPopulationAmount + "/random/" + xAmount
+        url: "api/rest/population/" + firstPopulationAmount + "/random/" + xAmount
     });
     request.done(function( data ) {
         lastPopulation = data;
@@ -60,7 +60,7 @@ function nextPopulation() {
         contentType: "application/json; charset=utf-8",
         dataType: "json",
         data: JSON.stringify(lastPopulation),
-        url: "/api/rest/population/next"
+        url: "api/rest/population/next"
     });
     request.done(function( data ) {
 //        alert("before set new");

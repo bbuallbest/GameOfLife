@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Game Of Life</title>
+    <link href="assets/css/styles.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div id="header">
+    <div id="label" class="label-block">
+        <span id="label-pref">GAME</span>
+        <span id="label-suf">OF LIFE</span>
+    </div>
+    <div id="population" class="label-block">
+        <span>Population:</span>
+        <span id="population-cntr"></span>
+    </div>
+    <div id="run-btn" class="btn label-block"><a href="#">run</a></div>
+    <div id="stop-btn" class="btn label-block"><a href="#">stop</a></div>
+    <div id="restart-btn" class="btn label-block"><a href="#">restart</a></div>
+</div>
+
+<canvas id="canvas" width="1200" height="570"></canvas>
+
+<script src="assets/js/lib/jquery-2.1.1.min.js"></script>
+<script src="assets/js/lib/obelisk.min.js"></script>
+<script src="assets/js/customCube.js"></script>
+</body>
+</html>

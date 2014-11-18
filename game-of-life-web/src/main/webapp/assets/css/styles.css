@@ -1,0 +1,78 @@
+body {
+    background-color: #25A2AD;
+    font-family: Lato;
+    color: purple;
+}
+
+#header {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    /*background-color: blue;*/
+}
+.label-block {
+    display: inline-block;
+    font-weight: bold;
+    margin: 10px;
+    padding: 0px;
+    align-content: center;
+    /*background-color: gray;*/
+}
+#label {
+    top: 10px;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    height: 60px;
+    width: 360px;
+    font-size: 50px;
+    font-weight: bold;
+}
+#label-pref {
+    color: gold;
+}
+#label-suff {
+    color: gold;
+}
+#population {
+    /*background-color: gray;*/
+    margin-left: 40px;
+    color: white;
+    width: 240px;
+    height: 30px;
+    font-size: 20px;
+}
+.btn {
+    height: 42px;
+    text-align: center;
+    font-size: 30px;
+    width: auto;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-weight: normal;
+    /*border: 3px solid #81181D;*/
+    margin: 0px;
+}
+.btn a {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+/*.btn a:hover {*/
+    /*color: gold;*/
+/*}*/
+#run-btn {
+    margin-left: 260px;
+}
+#run-btn a:hover {
+    color: #FA94E2;
+}
+#stop-btn a:hover{
+    color: #DA3E45;
+}
+#restart-btn a:hover {
+    color: #0B3660;
+}
+#population-cntr {
+    color: #F39D20;
+}

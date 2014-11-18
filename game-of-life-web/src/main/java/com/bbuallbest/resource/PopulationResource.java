@@ -57,7 +57,8 @@ public class PopulationResource {
     }
 
     private void printLog(String message) {
-        Record record = new Record(new DateTime(), Importance.NORMAL, httpRequest.getRemoteAddr(), message);
+        String source = httpRequest.getRemoteHost() + ":" + httpRequest.getRemotePort();
+        Record record = new Record(new DateTime(), Importance.NORMAL, source, message);
         System.out.println(record);
     }
 }

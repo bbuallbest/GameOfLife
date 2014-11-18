@@ -7,7 +7,7 @@ var zAmount = 1;
 var offset = 90;
 var timeOut = 500;
 var firstPopulationAmount = 100;
-var run = 1;
+var run = 0;
 var lastPopulation;
 var brickBodyColor = 0x042D2F;
 var brickBorderColor = 0x060E0E;

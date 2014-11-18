@@ -137,7 +137,9 @@ public class ArrayJournal implements Journal{
 
     @Override
     public void sortByDate() {
-        Collections.sort(Arrays.asList(records), dateComparator);
+        List<Record> temp = recordsArrayToList();
+        Collections.sort(temp, dateComparator);
+        records = toArray(temp, records.length);
     }
 
     @Override
@@ -145,7 +147,9 @@ public class ArrayJournal implements Journal{
         JournalComparatorContainer comparatorContainer = new JournalComparatorContainer();
         comparatorContainer.addNextLevelComparator(importanceComparator);
         comparatorContainer.addNextLevelComparator(dateComparator);
-        Collections.sort(Arrays.asList(records), comparatorContainer);
+        List<Record> temp = recordsArrayToList();
+        Collections.sort(temp, comparatorContainer);
+        records = toArray(temp, records.length);
     }
 
     @Override
@@ -156,8 +160,7 @@ public class ArrayJournal implements Journal{
         comparatorContainer.addNextLevelComparator(dateComparator);
         List<Record> temp = recordsArrayToList();
         Collections.sort(temp, comparatorContainer);
-        temp.toString();
-        records = toArray(temp);
+        records = toArray(temp, records.length);
     }
 
     @Override
@@ -165,7 +168,9 @@ public class ArrayJournal implements Journal{
         JournalComparatorContainer comparatorContainer = new JournalComparatorContainer();
         comparatorContainer.addNextLevelComparator(sourceComparator);
         comparatorContainer.addNextLevelComparator(dateComparator);
-        Collections.sort(Arrays.asList(records), comparatorContainer);
+        List<Record> temp = recordsArrayToList();
+        Collections.sort(temp, comparatorContainer);
+        records = toArray(temp, records.length);
     }
 
     @Override
@@ -228,9 +233,9 @@ public class ArrayJournal implements Journal{
         return recordList;
     }
 
-    private Record[] toArray(List<Record> recordList) {
-        Record[] records = new Record[recordList.size()];
-        for (int i = 0; i < records.length; i++) {
+    private Record[] toArray(List<Record> recordList, int size) {
+        Record[] records = new Record[size];
+        for (int i = 0; i < recordList.size(); i++) {
             records[i] = recordList.get(i);
         }
         return records;

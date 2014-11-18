@@ -97,3 +97,7 @@ dist/
 nbdist/
 nbactions.xml
 nb-configuration.xml
+
+## NC ##
+QUESTIONS.txt
+ANSWERS.txt

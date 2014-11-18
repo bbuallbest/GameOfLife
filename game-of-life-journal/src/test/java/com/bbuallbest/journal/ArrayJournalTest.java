@@ -72,4 +72,38 @@ public class ArrayJournalTest {
         testJournal.remove(startIndex, stopIndex);
         Assert.assertArrayEquals(expectedJournal.getRecords(), testJournal.getRecords());
     }
+
+    @Test
+    public void sortByImportanceSourceDate() {
+        Record record1 = new Record("2015-11-17 09-48-58 !!!!! source1 some message1");
+        Record record2 = new Record("2017-11-17 09-48-58 !!!   source2 some message2");
+        Record record3 = new Record("2014-11-17 09-48-58 !!!   source3 some message3");
+        Record record4 = new Record("2012-11-17 09-48-58 !!!!! source2 some message4");
+        Record record5 = new Record("2013-11-17 09-48-58 !!!!! source4 some message2");
+        Record record6 = new Record("2018-11-17 09-48-58 !!!   source3 some message3");
+
+        Journal testJournal = new ArrayJournal();
+        testJournal.add(record1);
+        testJournal.add(record2);
+        testJournal.add(record3);
+        testJournal.add(record4);
+        testJournal.add(record5);
+        testJournal.add(record6);
+
+        Journal expectedJournal = new ArrayJournal();
+        expectedJournal.add(record2);
+        expectedJournal.add(record3);
+        expectedJournal.add(record6);
+        expectedJournal.add(record1);
+        expectedJournal.add(record4);
+        expectedJournal.add(record5);
+
+        testJournal.sortByImportanceSourceDate();
+        System.out.println("-----");
+        testJournal.printRecords();
+        System.out.println("--------");
+        expectedJournal.printRecords();
+        Assert.assertTrue(expectedJournal.equals(testJournal));
+    }
+
 }

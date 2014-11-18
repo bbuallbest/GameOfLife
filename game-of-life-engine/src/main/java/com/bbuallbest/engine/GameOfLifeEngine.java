@@ -14,10 +14,8 @@ public class GameOfLifeEngine {
 
 
     public PopulationBoard generateNextPopulationState(PopulationBoard board) {
-        System.out.println("INPUT: " + board.toString());
         PopulationBoard nextPopulationBoard = new PopulationBoard(board.getBoardLength());
         nextPopulationBoard.setBoard(nextPopulation(board.getBoard()));
-        System.out.println("OUTPUT: " + nextPopulationBoard);
         return nextPopulationBoard;
     }
 

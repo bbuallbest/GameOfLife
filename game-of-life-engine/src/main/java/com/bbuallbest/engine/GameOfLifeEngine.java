@@ -32,7 +32,7 @@ public class GameOfLifeEngine {
     private boolean willCellAlive(int row, int column, boolean[][] previousPopulation) {
         int aroundLiveCellsAmount = countAroundLiveCells(row, column, previousPopulation);
         if(previousPopulation[row][column]) {
-            if(aroundLiveCellsAmount >= MIN_LIVE_NEIGHBOR_AMOUNT && aroundLiveCellsAmount <= MAX_LIVE_NEIGHBOR_AMOUNT)
+            if (aroundLiveCellsAmount >= MIN_LIVE_NEIGHBOR_AMOUNT && aroundLiveCellsAmount <= MAX_LIVE_NEIGHBOR_AMOUNT)
                 return true;
             return false;
         } else {

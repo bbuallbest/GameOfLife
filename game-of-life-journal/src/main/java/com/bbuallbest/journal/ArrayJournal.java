@@ -220,9 +220,9 @@ public class ArrayJournal implements Journal{
     }
 
     private boolean isDateInRange(DateTime date, DateTime left, DateTime right) {
-        if(left.compareTo(date) <= 0 && right.compareTo(date) >= 0)
-            return true;
-        return false;
+        return (left.compareTo(date) <= 0 && right.compareTo(date) >= 0);
+//            return true;
+//        return false;
     }
 
     private List<Record> recordsArrayToList() {
